@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Grammar Guru | Grammar and Spell Check Your Entire Website</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+</head>
+
+<body id="element-with-background-image">
+
+
+
+
+    <!-- Nav Bar -->
+    <nav>
+
+        <div id="nav-1">
+            <h1>Grammar Guru</h1>
+        </div>
+        <div id="nav-2">
+            <ul>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+                <li>
+                    <a href="pricing.html">PLANS AND PRICING</a>
+                </li>
+                <li>
+                    <a href="faq.html">FAQ</a>
+                </li>
+                <li>
+                    <a href="index.html">HOME</a>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="main-content">
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">User Input</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Sitemap URL</button>
+
+            <div id="London" class="tabcontent">
+                <br>
+                <p class="p-tab">Enter your bad grammar below.</p>
+                <!-- user input  -->
+                <div id="user-input-div">
+                    <textarea id="user-input" class="input-class" type="text" placeholder=""></textarea>
+                </div>
+
+                <!-- This is where the output will be -->
+                <div id="test"></div>
+                <div id="button-div">
+                    <button id="clear-button" type="submit">Clear</button>
+                    <button id="submit-button" type="submit">Submit</button>
+                </div>
+            </div>
+            <div id="Paris" class="tabcontent">
+                <br>
+                <p class="p-tab">Enter in your Sitemap URL below
+                    <br>
+                    <a href="#">What's a Sitemap URL?</a>
+                </p>
+
+                <!-- site map url -->
+                <div id="user-input-div">
+                    <!-- Try This Instead of Input <textarea id="user-input" class="input-class" type="text" placeholder="Enter your bad grammar or Sitemap URL"></textarea>-->
+                    <!-- <input id="user-input" class="input-class" type="text" placeholder="Enter your bad grammar or Sitemap URL"> -->
+                    <textarea id="user-input-2" class="input-class" type="text" placeholder=""></textarea>
+                </div>
+                <!-- This is where the output will be -->
+                <div id="test"></div>
+                <div id="button-div">
+                    <button id="clear-button" type="submit">Clear</button>
+                    <button id="submit-button-2" type="submit" onclick="document.getElementById('url-modal').style.display='block'">Submit</button>
+                </div>
+            </div>
+            <div class="w3-modal" id="url-modal">
+                <div class="w3-modal-content">
+                    <header class="w3-container">
+                        <span onclick="document.getElementById('url-modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <!-- <h2>Modal Header</h2> -->
+                    </header>
+                    <div class="w3-modal-container">
+                        <div id="user-input-div">
+                            <textarea id="selector-input-1" placeholder="enter an element selector"></textarea>
+                            <textarea id="selector-input-2" placeholder="(optional) enter sub-selector"></textarea>
+                        </div>
+                        <div id="pages-visited"></div>
+                        <div id="modal-test"></div>
+                        <div id="button-div">
+                            <button id="clear-button-3" type="submit" onclick="var list = document.getElementById('modal-test'); while (list.firstChild) {list.removeChild(list.firstChild)};  var visited = document.getElementById('pages-visited'); visited.innerHTML = ''">Clear</button>
+                            <button id="submit-button-3" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <h2 style="font-size: 40px;font-weight: 300; text-align: center;margin-top: 40px;opacity: 0.5;">Welcome</h2>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Grammar Guru (C) 2018. All Rights Reserved.</p>
+        <!--
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        -->
+    </footer>
+
+    <!-- Library - used to store words you want to avoid the API from showing in the results -->
+    <!--CREATE A LOOP IN API TO MAKE THIS WORK -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2>Library</h2>
+        <p>You have entered the Achaia Records
+            <br>
+            <br> Save all words you would like the Grammar Guru to ignore.</p>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <!-- JQuery file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- JS file for application effects -->
+    <script type="text/javascript" src="assets/javascript/effects.js"></script>
+    <script type="text/javascript" src="assets/javascript/grammar.js"></script>
+    <script type="text/javascript" src="assets/javascript/bundle.js"></script>
+    <script type="text/javascript" src="assets/javascript/grammarCheck.js"></script>
+
+
+
+</body>
+
+</html>
